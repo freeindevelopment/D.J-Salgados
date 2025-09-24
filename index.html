@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D.J Salgados</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+<header>
+  <div class="banner-content">
+    <h1>
+    
+    </h1>
+  </div>
+</header>
+
+
+  <main>
+    <!-- Sobre -->
+    <section class="sobre">
+      <h2>Sobre Mim</h2>
+      <p>Na D. J Salgados, nosso objetivo é oferecer qualidade, sabor e praticidade para o seu dia a dia. Trabalhamos com receitas artesanais, ingredientes frescos e aquele tempero caseiro que todo mundo ama!</p>
+    </section>
+
+    <!-- Cardápio -->
+    <section class="cardapio">
+  <h2>Cardápio</h2>
+
+  <!-- Coxinha G de Costela -->
+  <div class="item" 
+     data-nome="Coxinha G Costela/Mandioca" 
+     data-preco="12" 
+     data-minimo="5" 
+     data-sabores="Costela com Mandioca">
+  <img src="images/coxinha-de-carne-mandioca.jpeg" alt="Coxinha G Costela" class="item-img">
+  <h3>Coxinha G de Costela/mandioca</h3>
+  <p>R$ 12,00 / und</p>
+  <p>Entrega mínima: 5 unidades + taxa de entrega</p>
+  <button class="add-carrinho">Adicionar</button>
+</div>
+
+
+  <!-- Coxinha G Frango -->
+<div class="item" data-nome="Coxinha G Frango" data-preco="8" data-minimo="5" data-sabores="Frango">
+  <img src="images/coxinha-de-frango.jpg" alt="Coxinha G Frango" class="item-img">
+  <h3>Coxinha G Frango</h3>
+  <p>R$ 8,00 / und</p>
+  <p>Entrega mínima: 5 unidades + taxa de entrega</p>
+  <button class="add-carrinho">Adicionar</button>
+</div>
+
+
+<!-- Coxinha G Carne -->
+<div class="item" data-nome="Coxinha G Carne" data-preco="8" data-minimo="5" data-sabores="Carne">
+  <img src="images/coxinha-carne.jpg" alt="Coxinha G Carne" class="item-img">
+  <h3>Coxinha G Carne</h3>
+  <p>R$ 8,00 / und</p>
+  <p>Entrega mínima: 5 unidades + taxa de entrega</p>
+  <button class="add-carrinho">Adicionar</button>
+</div>
+
+
+
+  <!-- Mini Coxinha P -->
+  <div class="item" data-nome="Mini Coxinha" data-preco="1" data-minimo="20" data-sabores="Carne,Frango,Presunto,Queijo">
+  <img src="images/coxinhas.jpg" alt="Mini Coxinha" class="item-img" />
+  <h3>Mini Coxinha</h3>
+  <p>R$ 1,00 / und</p>
+  <p>Sabores: Carne, Frango, Presunto e Queijo</p>
+  <p>Entrega mínima: 20 unidades + taxa de entrega</p>
+  <button class="add-carrinho">Adicionar</button>
+</div>
+
+
+  <!-- Mini Pastel P -->
+ <div class="item" data-nome="Mini Pastel" data-preco="1" data-minimo="20" data-sabores="Carne,Frango,Queijo">
+  <img src="images/pasteis-p-.jpg" alt="Mini Pastel" class="item-img">
+  <h3>Mini Pastel</h3>
+  <p>R$ 1,00 / und</p>
+  <p>Sabores: Carne, Frango, Queijo</p>
+  <p>Entrega mínima: 20 unidades + taxa de entrega</p>
+  <button class="add-carrinho">Adicionar</button>
+</div>
+
+
+</section>
+
+    <!-- Vídeos -->
+    <section class="videos">
+      <h2>Vídeos</h2>
+      <video controls width="300">
+        <source src="videos/coxinhas.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+      <video controls width="300">
+        <source src="videos/moni video- cox-past.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+
+       <video controls width="300">
+        <source src="videos2\mini vídeo coxinha.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </section>
+
+    <!-- Imagens de Amostra -->
+<section class="amostras">
+  <h2>Amostras dos Nossos Salgados</h2>
+  <div class="galeria-amostras">
+    <img src="images\coxinhas e pasteis .jpg" alt="Amostra" />
+    <img src="images/coxinhas-p-.jpg" alt="Amostra" />
+    <img src="images\coxinhas-p.jpg" alt="Amostra" />
+    <img src="images\coxinhas-pastel.jpg" alt="Amostra" />
+    <img src="images\pastéis-p.jpg" alt="Amostra" alt="Amostra" />
+    <img src="images\mini-coxinha-peso-1und.jpg" alt="Amostra" />
+    <img src="images\mini-coxinha-peso-aberta.jpg" alt="Amostra" />
+    <img src="images\mini-coxinha-peso-und.jpg" alt="Amostra" />
+  
+
+  </div>
+</section>
+
+    <!-- Carrinho -->
+    <section class="carrinho">
+      <h2>Carrinho</h2>
+      <ul id="lista-carrinho"></ul>
+      <p>Total: R$ <span id="total">0,00</span></p>
+      <button id="finalizar">Finalizar Pedido no WhatsApp</button>
+    </section>
+  </main>
+
+  <div class="observacao-pedido">
+    <p><strong>Observação:</strong> Seu pedido é feito <strong>sob encomenda</strong>. Por gentileza, informe o <strong>dia e horário desejado</strong> para entrega ou retirada.</p>
+    <p>📍 Envie também o <strong>endereço completo</strong> para cálculo da <strong>taxa de entrega</strong> (se aplicável).</p>
+    <p>A produção será iniciada <strong>após a confirmação do pagamento</strong>.</p>
+    <p>🙏 Agradecemos a preferência!</p>
+  </div>
+</section>
+  <footer>
+    <p>📱 WhatsApp: (65) 99334-1405 Daniel Júnior</p>
+  </footer>
+
+  <script src="js/carrinho.js" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registrado!'))
+        .catch(err => console.log('Falha no SW:', err));
+    }
+  </script>
+</body>
+</html>

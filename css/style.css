@@ -1,0 +1,298 @@
+/* ===== RESET GERAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== HEADER (BANNER COM TEXTO) ===== */
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+  justify-content: flex-start; 
+  gap: 40px;
+  padding: 60px 20px 40px;
+  background-image: url("../images/d.j_salgados.png");
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #000;
+  min-height: 4gi00px;
+  color: #fff;
+  text-align: left; 
+  position: relative;
+    align-items: flex-start;
+}
+
+
+header .banner-content {
+  max-width: 60%; 
+}
+
+header .banner-content h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: bold;
+  color: #eedf15;
+  text-shadow: 2px 2px 5px rgba(233, 0, 0, 0.8);
+  margin: 0;
+  white-space: normal;
+  word-break: break-word;
+  text-align: left; 
+}
+
+
+/* ===== SEÇÕES GERAIS ===== */
+section {
+  background: rgba(255, 255, 255, 0.95);
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== TÍTULOS ===== */
+h2 {
+  color: #d35400;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #333;
+  margin-top: 10px;
+}
+
+/* ===== ITENS DO CARDÁPIO ===== */
+.cardapio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.item {
+  flex: 1 1 280px;
+  max-width: 300px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.item:hover {
+  transform: scale(1.03);
+}
+
+.item-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.item p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.add-carrinho {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #e67e22;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-carrinho:hover {
+  background-color: #d35400;
+}
+
+/* ===== VÍDEOS ===== */
+.videos {
+  text-align: center;
+}
+
+.videos video {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  margin: 10px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* ===== CARRINHO ===== */
+.carrinho ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.carrinho li {
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  background-color: #f8f8f8;
+  border-left: 5px solid #e67e22;
+  border-radius: 4px;
+}
+
+#total {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #28a745;
+}
+
+#finalizar {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#finalizar:hover {
+  background-color: #218838;
+}
+
+/* ===== OBSERVAÇÃO DO PEDIDO ===== */
+.observacao-pedido {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ffeeba;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ===== AMOSTRAS ===== */
+.amostras {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 1200px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.amostras h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #d35400;
+}
+
+.galeria-amostras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.galeria-amostras img {
+  width: 230px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #f0f0f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #090000;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 15px;
+    min-height: auto;
+  }
+
+  .logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  header .banner-content {
+    max-width: 100%;
+  }
+
+  header .banner-content h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .cardapio {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .item-img {
+    height: 180px;
+  }
+
+  .videos video {
+    max-width: 90%;
+    height: auto;
+  }
+
+  #finalizar {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  header .banner-content h1 {
+    font-size: 1.5rem;
+  }
+
+  h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  .item-img {
+    height: 150px;
+  }
+
+  .videos video {
+    height: auto;
+  }
+}
