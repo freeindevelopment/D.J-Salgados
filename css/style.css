@@ -1,24 +1,23 @@
-/* ===== RESET GERAL ===== */
+/* ===== style.css ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== HEADER (BANNER COM TEXTO) ===== */
 header {
   display: flex;
   flex-direction: row;
-  align-items: center;  
+  align-items: flex-start;  
   justify-content: flex-start; 
   gap: 40px;
-  padding: 60px 20px 40px;
+  padding: 80px 25px 50px;
   background-image: url("../images/d.j_salgados.png");
   background-size: contain;
   background-position: center top;
   background-repeat: no-repeat;
   background-color: #000;
-  min-height: 4gi00px;
+  min-height: 300px;
   color: #fff;
   text-align: left; 
   position: relative;
@@ -27,72 +26,142 @@ header {
 
 
 header .banner-content {
-  max-width: 60%; 
+  max-width: 100%; 
 }
 
 header .banner-content h1 {
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(2.8rem, 4vw, 3rem);
   font-weight: bold;
   color: #eedf15;
-  text-shadow: 2px 2px 5px rgba(233, 0, 0, 0.8);
+  text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.8);
   margin: 0;
   white-space: normal;
   word-break: break-word;
   text-align: left; 
 }
+.banner-content p {
+  font-size: clamp(1.5rem, 1.5vw, 1.5rem);
+  color: #d9ef13;
+  margin-top: 10px;
+  text-shadow: 2px 2px 5px rgba(145, 0, 0, 0.982); 
+}
+
+.sobre {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #1a1a1a; 
+  color: #fff;
+}
+
+.sobre h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #b10303; 
+}
+
+.sobre p {
+  font-size: 1.5rem; 
+  line-height: 1.6;   
+  max-width: 700px;   
+  margin: 0 auto;
+}
 
 
-/* ===== SEÇÕES GERAIS ===== */
 section {
   background: rgba(255, 255, 255, 0.95);
   margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
-  max-width: 1200px;
+  max-width: 800px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 /* ===== TÍTULOS ===== */
-h2 {
-  color: #d35400;
-  margin-bottom: 10px;
+.sobre h2 {
+  color:   #b10303; 
+  margin-bottom: 30px;
+  
+  font-size: 2rem;
+  text-align: center;
 }
 
 h3 {
-  color: #333;
-  margin-top: 10px;
+  color: #ffffff;
+  margin-top: 20px;
 }
 
 /* ===== ITENS DO CARDÁPIO ===== */
 .cardapio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.item {
-  flex: 1 1 280px;
-  max-width: 300px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
   text-align: center;
-  transition: transform 0.2s ease-in-out;
 }
 
-.item:hover {
-  transform: scale(1.03);
+.cardapio h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #b10303; 
 }
 
-.item-img {
+/* Container dos itens */
+.cardapio .item {
+  display: inline-block;
+  width: 280px;
+  margin: 10px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  vertical-align: top;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.cardapio .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Imagens dos itens */
+.cardapio .item-img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
+
+/* Títulos e textos */
+.cardapio .item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #1976d2; 
+}
+
+.cardapio .item p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #333;
+}
+
+/* Botão adicionar */
+.cardapio .add-carrinho {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #b10303;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cardapio .add-carrinho:hover {
+  background-color: #870202;
+}
+
 
 .item p {
   font-size: 0.95rem;
@@ -216,8 +285,16 @@ footer {
   font-size: 14px;
   color: #090000;
 }
-
 /* ===== RESPONSIVO ===== */
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+  .cardapio .item {
+    width: 45%;
+  }
+}
+
+/* Tablets pequenos / celulares grandes */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -246,21 +323,22 @@ footer {
   }
 
   .cardapio {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   .item {
-    width: 90%;
+    width: 80%;
     max-width: 100%;
   }
 
   .item-img {
-    height: 180px;
+    height: 150px;
   }
 
   .videos video {
-    max-width: 90%;
+    max-width: 70%;
     height: auto;
   }
 
@@ -269,7 +347,35 @@ footer {
     font-size: 18px;
   }
 }
+/* Responsividade */
+@media (max-width: 768px) {
+  .sobre h2 {
+    font-size: 2rem;
+  }
 
+  .sobre p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre h2 {
+    font-size: 1.5rem;
+  }
+
+  .sobre p {
+    font-size: 1rem;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 600px) {
+  .cardapio .item {
+    width: 100%;
+  }
+}
+
+/* Celulares muito pequenos */
 @media (max-width: 480px) {
   body {
     padding: 10px;
@@ -289,7 +395,7 @@ footer {
   }
 
   .item-img {
-    height: 150px;
+    height: 100px;
   }
 
   .videos video {

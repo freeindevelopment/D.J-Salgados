@@ -1,4 +1,4 @@
-const CACHE_NAME = 'dj-salgados-v5'; // mude a versão sempre que atualizar
+const CACHE_NAME = 'dj-salgados-v5'; 
 const urlsToCache = [
   '/',
   '/index.html',
@@ -10,16 +10,16 @@ const urlsToCache = [
   
 ];
 
-// Instalando e armazenando arquivos no cache
+
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(urlsToCache))
-      .then(() => self.skipWaiting()) // ativa imediatamente
+      .then(() => self.skipWaiting()) 
   );
 });
 
-// Ativando e removendo caches antigos
+
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
@@ -28,18 +28,18 @@ self.addEventListener('activate', event => {
           if (name !== CACHE_NAME) return caches.delete(name);
         })
       );
-    }).then(() => self.clients.claim()) // assume controle das páginas
+    }).then(() => self.clients.claim()) 
   );
 });
 
-// Escutando mensagem do navegador para atualizar imediatamente
+
 self.addEventListener('message', event => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
 });
 
-// Interceptando requisições
+
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request).then(response => {
