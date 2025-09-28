@@ -203,6 +203,13 @@ h3 {
   list-style-type: none;
   padding-left: 0;
 }
+.controls-carrinho {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  margin-top: 10px;
+  justify-content: flex-start;
+}
 
 .carrinho li {
   padding: 8px 10px;
@@ -233,6 +240,21 @@ h3 {
 #finalizar:hover {
   background-color: #218838;
 }
+.btn-carrinho {
+  padding: 10px 16px;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-carrinho:hover {
+  background-color: #d5d5d5;
+}
+
+
 
 /* ===== OBSERVAÇÃO DO PEDIDO ===== */
 .observacao-pedido {
@@ -400,5 +422,23 @@ footer {
 
   .videos video {
     height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .controls-carrinho {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .btn-carrinho {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 14px;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+    padding: 0 2rem;
   }
 }
